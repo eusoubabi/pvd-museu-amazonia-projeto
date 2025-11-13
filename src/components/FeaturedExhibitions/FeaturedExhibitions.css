@@ -1,0 +1,50 @@
+.featured-section {
+    background-color: #051a07;
+    padding: 3rem 0;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    max-width: 1280px;
+    margin: 0 auto;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.featured-card {
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: scale(1.03);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.card-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}

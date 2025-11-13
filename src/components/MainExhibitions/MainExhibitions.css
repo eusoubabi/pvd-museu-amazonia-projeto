@@ -1,0 +1,76 @@
+.main-exhibition-section {
+    background-color: #051a07;
+    padding: 3rem 2rem;
+}
+
+.section-title {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+}
+
+.main-exhibitions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 1.5rem; /* Espaço entre os cartões */
+}
+
+.main-card {
+  height: 380px; /* Cartões mais altos (verticais) */
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #0c4a36; /* Borda sutil no tom do site */
+}
+
+/* Imagem de fundo do cartão */
+.main-card-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Sobreposição escura com o texto */
+.main-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Verde do navbar com 70% de opacidade [cite: 130] */
+  background-color: rgba(12, 74, 54, 0.7);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  
+  transition: background-color 0.3s ease;
+}
+
+.main-card h3 {
+  color: white;
+  font-size: 2rem; /* Fonte grande */
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Efeitos de Hover */
+.main-card:hover .main-card-bg {
+  transform: scale(1.05); /* Zoom na imagem */
+}
+
+.main-card:hover .main-card-overlay {
+  background-color: rgba(12, 74, 54, 0.9); /* Overlay fica mais escuro */
+}

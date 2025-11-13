@@ -1,0 +1,34 @@
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 70vh;
+}
+
+.success-box {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 2px solid #0c4a36; /* Verde */
+  padding: 3rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.success-icon {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  background-color: #0c4a36;
+  color: white;
+  margin: 0 auto 1.5rem auto;
+}
+
+.success-box p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}

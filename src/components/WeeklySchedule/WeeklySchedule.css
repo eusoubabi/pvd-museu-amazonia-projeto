@@ -1,0 +1,81 @@
+/* Container principal da seção */
+.schedule-section {
+  display: flex; /* Coloca o texto e a imagem lado a lado */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 3rem; /* Espaço entre as colunas de texto e imagem */
+  padding: 4rem 0; /* Espaçamento em cima e embaixo */
+  color: white;
+  
+  /* Adiciona uma borda sutil em cima para separar da seção anterior */
+  border-top: 1px solid #0c4a36;
+}
+
+/* Coluna da esquerda */
+.schedule-content {
+  flex: 1; /* Ocupa metade do espaço */
+}
+
+.schedule-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  /* Cor laranja do botão */
+  color: #e9a131; 
+}
+
+.schedule-subtitle {
+  font-size: 1.8rem;
+  margin: 0.5rem 0 1.5rem 0;
+  font-weight: 500;
+}
+
+/* Botão "PROGRAMAÇÃO" */
+.schedule-button {
+  background-color: #f7941d; /* Laranja */
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Dias da semana */
+.schedule-days {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
+  gap: 1rem; /* Espaço entre os dias */
+  font-size: 1.1rem;
+}
+
+.day-item {
+  font-weight: bold;
+  padding-bottom: 4px; /* Adiciona espaço para a borda */
+  /* Borda inferior transparente para manter o alinhamento */
+  border-bottom: 4px solid transparent; 
+}
+
+/* Este é o estilo para o dia ATUAL */
+.day-item.today {
+  color: #e9a131; /* Cor laranja (mesma do botão) */
+  border-bottom-color: #e9a131; /* Borda laranja embaixo */
+}
+
+.schedule-days span {
+  font-weight: bold;
+}
+
+/* Coluna da direita */
+.schedule-image-container {
+  flex: 1; /* Ocupa a outra metade */
+}
+
+.schedule-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Borda arredondada na imagem */
+  display: block;
+}

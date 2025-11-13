@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+}
+
+body {
+  background-color: rgb(1, 26, 3); 
+  
+  /* imagem de fundo */
+  background-image: url('./assets/fundo-folhas.jpg');
+  background-size: cover; /* Faz a imagem cobrir a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Faz o fundo ficar parado ao rolar */
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}

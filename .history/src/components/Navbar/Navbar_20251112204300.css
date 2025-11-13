@@ -1,0 +1,50 @@
+/* Copie e cole este CSS */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0c4a36; /* Cor verde do seu design */
+  color: white;
+  
+  /* Isso é importante para o seu index.css [cite: 24] */
+  box-sizing: border-box; 
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Espaço entre os itens */
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+.navbar-icon-car {
+    height: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace; /* Usando a fonte do seu index.css [cite: 25] */
+  text-align: center;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar-login-btn {
+  background-color: #e9a131; /* Cor laranja do botão */
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+}

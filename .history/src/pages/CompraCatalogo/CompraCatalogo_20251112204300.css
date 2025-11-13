@@ -1,0 +1,66 @@
+.catalogo-container {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  background-color: #051a07; /* Verde mais escuro de fundo */
+}
+
+.ticket-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.ticket-card {
+  background: #fff;
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: left;
+}
+
+.ticket-card h3 {
+  color: #0c4a36; /* Verde */
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.ticket-description {
+  color: #051a07;
+  background-color: #fff;
+}
+
+.ticket-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.ticket-features {
+  background-attachment: fixed;
+  list-style-type: '✓ ';
+  padding-left: 1.5rem;
+  min-height: 100px;
+  color: #fff;
+}
+
+.ticket-features li {
+  color: #051a07;
+}
+
+.ticket-buy-btn {
+  background-color: #0c4a36; /* Verde */
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  text-transform: uppercase;
+}

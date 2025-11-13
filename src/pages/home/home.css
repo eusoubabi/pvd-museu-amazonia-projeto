@@ -1,0 +1,6 @@
+.home-content-wrapper {
+  max-width: 1280px;
+  margin: 0 auto; /* Centraliza na página */
+  padding: 2rem;
+  box-sizing: border-box;
+}

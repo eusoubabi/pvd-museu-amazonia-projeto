@@ -1,0 +1,81 @@
+.catalogo-container {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  background-color: #051a07; /* Verde mais escuro de fundo */
+}
+
+.ticket-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.ticket-card {
+  background: #fff;
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: left;
+}
+
+.ticket-card h3 {
+  color: #0c4a36; /* Verde */
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.ticket-description {
+  color: #051a07;
+  background-color: #fff;
+}
+
+.ticket-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.ticket-features {
+  background-attachment: fixed;
+  list-style-type: '✓ ';
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-buy-btn {
+  background-color: #e9a131; /* Laranja (SELECIONAR) */
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ticket-buy-btn:hover {
+  opacity: 0.9;
+}
+
+/* Novo estilo para o botão selecionado (feedback visual) */
+.ticket-buy-btn.selected-btn {
+  background-color: #0c4a36; /* Verde (SELECIONADO) */
+  color: white; 
+  border: 1px solid #e9a131; 
+  cursor: default; /* Impede a impressão de que pode ser clicado novamente */
+}
+
+.cart-redirect-btn {
+    margin-top: 2rem;
+}

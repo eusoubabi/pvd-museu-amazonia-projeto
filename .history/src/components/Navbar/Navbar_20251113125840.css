@@ -1,0 +1,73 @@
+/* Copie e cole este CSS */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0c4a36; /* Cor verde do seu design */
+  color: white;
+  
+  /* Isso é importante para o seu index.css [cite: 24] */
+  box-sizing: border-box; 
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Espaço entre os itens */
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+.navbar-icon-car {
+    width: 30px;   /* Ajuste para o tamanho desejado, por exemplo, 30px */
+    height: 30px;  /* Mantenha a proporção ou defina 'auto' para altura */
+    object-fit: contain; /* Garante que a imagem não seja cortada */
+    margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo do ícone, antes do texto */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace; /* Usando a fonte do seu index.css [cite: 25] */
+  text-align: center;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar-login-btn {
+  background-color: #e9a131; /* Cor laranja do botão */
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+}
+/* Correção para garantir que os links e imagens da Navbar sejam transparentes */
+.navbar-left img,
+.navbar-right .navbar-cart img {
+    /* Isso força a transparência. Se a imagem PNG/AVIF tiver o fundo preto/cinza 
+    embutido (o que parece ser o caso), isso não vai funcionar. 
+    Se funcionar, ótimo!
+    */
+    background-color: transparent; 
+}
+
+/* Se a imagem estiver dentro de um link (<a>), o link também deve ser transparente */
+.navbar-right .navbar-cart {
+    display: flex;             /* Habilita o Flexbox */
+    flex-direction: column;    /* Coloca os itens em coluna (ícone em cima, texto embaixo) */
+    align-items: center;       /* Centraliza horizontalmente os itens */
+    text-align: center;        /* Garante que o texto também esteja centralizado se houver quebra de linha */
+    color: #fff;               /* Para garantir que "MEU CARRINHO" seja branco */
+    font-size: 0.8em;          /* Ajuste o tamanho da fonte se necessário */
+    margin-right: 15px;        /* Mantém um espaçamento à direita se houver outros elementos */
+}

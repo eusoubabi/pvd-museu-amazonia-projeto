@@ -1,0 +1,84 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* Mantenha o PADDING apenas nas laterais (left/right) */
+  padding: 0 2rem; 
+  
+  /* NOVO: Defina uma altura fixa para toda a barra de navegação */
+  height: 90px; 
+  
+  background-color: #0c4a36; 
+  color: white;
+  box-sizing: border-box; 
+}
+
+/* Os estilos abaixo não precisam de mudança */
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+}
+
+.navbar-logo {
+  /* Seu valor de 120px */
+  height: 120px;
+  /* Garante que a imagem seja do tamanho exato do container */
+  object-fit: contain; 
+}
+
+.navbar-icon-car {
+    height: 40px;      /* Volta ao tamanho original ou ao que você prefere */
+    /* REMOVEMOS: width, margin-bottom, object-fit */
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace; /* Usando a fonte do seu index.css [cite: 25] */
+  text-align: center;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar-login-btn {
+  background-color: #e9a131; /* Cor laranja do botão */
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+}
+/* Correção para garantir que os links e imagens da Navbar sejam transparentes */
+.navbar-left img,
+.navbar-right .navbar-cart img {
+    /* Isso força a transparência. Se a imagem PNG/AVIF tiver o fundo preto/cinza 
+    embutido (o que parece ser o caso), isso não vai funcionar. 
+    Se funcionar, ótimo!
+    */
+    background-color: transparent; 
+}
+
+/* Se a imagem estiver dentro de um link (<a>), o link também deve ser transparente */
+/* src/components/Navbar/Navbar.css */
+
+.navbar-right .navbar-cart {
+    /* REMOVEMOS: flex-direction: column; */
+    
+    display: flex;             /* Habilita o Flexbox (ícone e texto lado a lado) */
+    align-items: center;       /* Centraliza os itens *verticalmente* (o ícone com o texto) */
+    gap: 0.5rem;               /* Adiciona um pequeno espaço entre o ícone e o texto */
+    
+    /* Outros estilos que você já tinha: */
+    color: white;              /* Para garantir que "MEU CARRINHO" seja branco */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+

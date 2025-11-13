@@ -1,0 +1,146 @@
+.validacao-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h2, h3 {
+    color: #f7941d; /* Laranja para títulos */
+}
+
+/* NOVO: Estilo do Botão de Imprimir/Salvar PDF */
+.print-btn {
+  background-color: #f7941d; /* Laranja */
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem; /* Espaço após o título */
+  margin-bottom: 2rem; /* Espaço antes dos ingressos */
+  transition: background-color 0.3s;
+}
+
+.print-btn:hover {
+  background-color: #e9a131;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.ticket-qr-card {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center; /* Centraliza o conteúdo do cartão */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* NOVO: Estilo para o nome do museu */
+.ticket-museum-name {
+    color: #0c4a36; /* Verde escuro */
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* NOVO: Estilo para a linha divisória */
+.ticket-divider {
+    border: none;
+    border-top: 1px dashed #ddd;
+    margin: 1.5rem 0;
+}
+
+.ticket-logo {
+  height: 80px; /* Garante que a logo tenha um bom tamanho */
+  width: auto;
+  margin-bottom: 1rem;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.ticket-info p {
+    margin: 0.25rem 0; 
+    color: #555;
+}
+
+.ticket-info p strong { /* ESTA É A REGRA CHAVE */
+    color: #0c4a36; /* Cor escura para destaque */
+    font-weight: bold; /* Já é o padrão, mas garante */
+}
+
+.ticket-type {
+    font-size: 1.2rem;
+    font-weight: bold;
+  
+    margin-bottom: 1rem; 
+}
+
+.ticket-qrcode {
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem auto;
+  display: block;
+  border: 4px solid #0c4a36; /* Borda para o QR Code */
+  border-radius: 4px;
+}
+
+.ticket-id-small {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 1rem;
+}
+
+
+/* Regras para Impressão */
+@media print {
+  /* Esconde a Navbar e o botão de Imprimir quando estiver imprimindo/salvando PDF */
+  .navbar, .print-btn {
+    display: none !important;
+  }
+  
+  /* Garante que o conteúdo de ingressos ocupe toda a largura da página impressa */
+  .validacao-container {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  /* Faz com que a tela de ingressos se pareça mais com um documento */
+  .tickets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  /* Garante que o cartão de ingresso seja impresso sem fundos */
+  .ticket-qr-card {
+    border: 1px solid #ccc; /* Adiciona uma borda física para separar os ingressos */
+    margin-bottom: 1rem;
+    break-inside: avoid; /* Evita que o cartão seja quebrado entre páginas */
+    box-shadow: none;
+    padding: 1rem; /* Ajusta o padding para impressão */
+  }
+
+  /* Ajusta o tamanho da logo na impressão */
+  .ticket-logo {
+      height: 60px;
+  }
+
+  /* Ajusta o tamanho do QR code na impressão */
+  .ticket-qrcode {
+      max-width: 150px;
+  }
+}

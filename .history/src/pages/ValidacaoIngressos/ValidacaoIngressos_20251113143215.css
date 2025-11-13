@@ -1,0 +1,105 @@
+.validacao-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.ticket-qr-card {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.ticket-logo {
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+/* NOVO: Estilo para o nome do ingresso */
+.ticket-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0c4a36; /* Cor de destaque */
+}
+/* Estilo para informações adicionais */
+.ticket-info {
+    margin: 0.25rem 0;
+    color: #555;
+}
+
+.ticket-qrcode {
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem auto;
+  display: block;
+  /* NOVO: Borda para destacar o QR Code */
+  border: 4px solid #0c4a36; 
+  border-radius: 4px;
+}
+
+.ticket-id-small {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.print-btn {
+  background-color: #f7941d; /* Laranja */
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem; /* Espaço após o título */
+  margin-bottom: 2rem; /* Espaço antes dos ingressos */
+  transition: background-color 0.3s;
+}
+
+.print-btn:hover {
+  background-color: #e9a131;
+}
+
+/* NOVO: Regras para Impressão */
+@media print {
+  /* Esconde a Navbar e o botão de Imprimir quando estiver imprimindo/salvando PDF */
+  .navbar, .print-btn {
+    display: none !important;
+  }
+  
+  /* Garante que o conteúdo de ingressos ocupe toda a largura da página impressa */
+  .validacao-container {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  /* Faz com que a tela de ingressos se pareça mais com um documento */
+  .tickets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  /* Garante que o cartão de ingresso seja impresso sem fundos */
+  .ticket-qr-card {
+    border: 1px solid #ccc; /* Adiciona uma borda física para separar os ingressos */
+    margin-bottom: 1rem;
+    break-inside: avoid; /* Evita que o cartão seja quebrado entre páginas */
+    box-shadow: none;
+  }
+}

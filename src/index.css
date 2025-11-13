@@ -1,0 +1,25 @@
+body {
+    /* NOVO: Defina a família da fonte aqui */
+    font-family: 'Arial', sans-serif; /* Exemplo: Usando Arial */
+    
+    /* Cor do texto padrão */
+    color: #fff; 
+}
+
+body {
+  background-color: rgb(1, 26, 3); 
+  
+  /* imagem de fundo */
+  background-image: url('./assets/fundo-folhas.jpg');
+  background-size: cover; /* Faz a imagem cobrir a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Faz o fundo ficar parado ao rolar */
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}

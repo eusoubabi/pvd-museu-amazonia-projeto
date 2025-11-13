@@ -1,0 +1,76 @@
+.cart-container {
+  width: 100%;
+  max-width: 1100px; /* Reduzi um pouco a largura para ficar mais centralizado */
+  margin: 4rem auto; /* Aumenta a margem superior para afastar da navbar */
+  padding: 2rem;
+  color: #333;
+  background-color: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.cart-container h2 {
+  color: #0c4a36;
+  margin-top: 0;
+}
+
+/* ... (O restante do CSS existente) ... */
+
+/* Estilos do Resumo */
+.cupom-input {
+  display: flex;
+  margin: 0.5rem 0 1rem 0;
+  gap: 0.5rem;
+}
+
+.cupom-input input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.cupom-input button {
+  background-color: #0c4a36;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.total-row {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-top: 2px solid #ccc;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+/* NOVO ESTILO: Garante que o botão FECHAR PEDIDO (Link) ocupe 100% */
+.checkout-btn {
+  display: block; 
+  text-align: center;
+  
+  background-color: #e9a131; /* Laranja */
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%; /* Ocupa a largura total do container */
+  margin-top: 1.5rem; /* Espaçamento do total */
+  box-sizing: border-box; 
+  transition: opacity 0.3s ease;
+}
+
+.checkout-btn:hover {
+  opacity: 0.9;
+}

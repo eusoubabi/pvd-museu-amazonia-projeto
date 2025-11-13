@@ -1,0 +1,46 @@
+.validacao-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.ticket-qr-card {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.ticket-logo {
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.ticket-info p {
+  margin: 0.25rem 0;
+}
+
+.ticket-qrcode {
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.ticket-id-small {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}

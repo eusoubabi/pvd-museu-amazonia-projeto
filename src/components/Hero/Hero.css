@@ -1,0 +1,49 @@
+.hero-container {
+  height: 600px; /* Altura da seção */
+  background-size: cover;
+  background-position: center;
+  
+  /* Centraliza o conteúdo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  /* Efeito de escurecer a imagem */
+  position: relative;
+}
+
+/* Camada escura por cima da imagem */
+.hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Preto com 40% de opacidade */
+}
+
+.hero-content {
+  position: relative; /* Para ficar na frente da camada escura */
+  z-index: 2;
+  text-align: center;
+  color: white; /* Seu index.css já define isso, mas é bom garantir [cite: 26] */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  background-color: #f7941d; /* Laranja */
+  color: #333;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+}

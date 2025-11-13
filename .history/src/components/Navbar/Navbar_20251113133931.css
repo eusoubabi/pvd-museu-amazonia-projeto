@@ -1,0 +1,105 @@
+/* src/components/Navbar/Navbar.css */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* 🛑 ALTERAÇÕES PRINCIPAIS 🛑 */
+  /* Remove o padding, pois usaremos a altura fixa. */
+  padding: 0 2rem; 
+  /* Define a altura fixa que você deseja para a barra (ex: 60px) */
+  height: 60px; 
+  /* Adiciona a propriedade para corrigir a sobreposição se estiver fixo */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000;
+  /* FIM DAS ALTERAÇÕES PRINCIPAIS */
+  
+  background-color: #0c4a36; 
+  color: white;
+  box-sizing: border-box; 
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+}
+
+.navbar-logo {
+  height: 70px; /* Logo cabe em 60px de altura */
+}
+
+/* Os estilos para ícone e carrinho (caso você tenha voltado para o texto centralizado) */
+.navbar-right .navbar-cart {
+    /* Se você removeu o ícone e quer apenas o texto "MEU CARRINHO", remova display, align-items e gap */
+    /* Caso contrário, se o ícone e o texto estão lado a lado: */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-icon-car {
+    /* Removido se você tirou o ícone, ou volte ao tamanho original */
+    height: 40px; 
+}
+
+/* O restante dos seus estilos */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  /* 🛑 REMOVA ESTA LINHA: 🛑 */
+  /* font-family: 'Courier New', Courier, monospace; */
+  text-align: center;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar-login-btn {
+  background-color: #e9a131; 
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+/* Correção para garantir que os links e imagens da Navbar sejam transparentes */
+.navbar-left img,
+.navbar-right .navbar-cart img {
+    /* Isso força a transparência. Se a imagem PNG/AVIF tiver o fundo preto/cinza 
+    embutido (o que parece ser o caso), isso não vai funcionar. 
+    Se funcionar, ótimo!
+    */
+    background-color: transparent; 
+}
+
+/* Se a imagem estiver dentro de um link (<a>), o link também deve ser transparente */
+/* src/components/Navbar/Navbar.css */
+
+.navbar-right .navbar-cart {
+    /* REMOVEMOS: flex-direction: column; */
+    
+    display: flex;             /* Habilita o Flexbox (ícone e texto lado a lado) */
+    align-items: center;       /* Centraliza os itens *verticalmente* (o ícone com o texto) */
+    gap: 0.5rem;               /* Adiciona um pequeno espaço entre o ícone e o texto */
+    
+    /* Outros estilos que você já tinha: */
+    color: white;              /* Para garantir que "MEU CARRINHO" seja branco */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+

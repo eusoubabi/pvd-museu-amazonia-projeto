@@ -1,0 +1,113 @@
+.compra-data-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Mantém o escurecimento (opacidade 0.6) da imagem */
+  background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.compra-data-container {
+  /* CORREÇÃO: 
+  A altura real da Navbar é 120px (Logo) + 2rem (Padding). 
+  Usamos calc() para compensar EXATAMENTE essa altura no topo.
+  */
+  padding-top: calc(120px + 2rem); 
+  
+  /* CORREÇÃO: 
+  Usamos calc() para garantir que a altura mínima do conteúdo 
+  seja o restante da tela, menos a compensação do padding.
+  */
+  min-height: calc(100vh - 120px - 2rem);
+  
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  
+  background-color: #0c4a36; 
+}
+
+.compra-data-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 3rem;
+  
+  /* REMOVIDO: background-color: rgba(0, 0, 0, 0.7); */
+  /* REMOVIDO: padding: 2rem; */
+  
+  /* NOVO: Adicione padding ao container principal (centralizado) */
+  padding: 2rem;
+  border-radius: 8px;
+  
+  /* NOVO: Defina uma largura máxima para centralizar o conteúdo */
+  max-width: 900px; 
+  width: 100%;
+}
+
+/* NOVO: Crie um elemento wrapper com o fundo verde-escuro */
+.compra-data-content-wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+  /* Garante que ele ocupe todo o espaço central */
+  width: 100%; 
+}
+
+.compra-data-info h2 {
+  font-size: 3rem;
+  color: #f7941d; /* Laranja */
+  margin-top: 0;
+}
+
+.compra-data-info ul {
+  list-style-type: '✓ '; /* Adiciona um check */
+  padding-left: 1.5rem;
+}
+
+.compra-data-info li {
+  margin-bottom: 0.5rem;
+}
+
+.compra-data-calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Customizando o react-calendar */
+.react-calendar {
+  background: #5b8165;;
+  border: none;
+  border-radius: 8px;
+  color: #333;
+}
+
+.react-calendar__tile--active,
+.react-calendar__tile--active:hover {
+  background: #0c4a36 !important; /* Verde */
+  color: rgb(0, 0, 0) !important;
+}
+
+.react-calendar__tile--now {
+  background: #e9a131; /* Laranja */
+  color: #333;
+}
+
+/* Botão (reutilizando o estilo do Hero) */
+.hero-btn {
+  background-color: #f7941d;
+  color: #333;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}

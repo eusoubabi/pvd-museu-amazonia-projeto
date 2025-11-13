@@ -1,0 +1,173 @@
+.cart-container {
+  /* Largura e margem originais */
+  width: 100%;
+  max-width: 1280px; 
+  margin: 4rem auto 2rem auto; /* Aumentei a margem superior para 4rem para afastar da navbar */
+  padding: 2rem;
+  color: #333;
+  background-color: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.cart-container h2 {
+  color: #0c4a36;
+  margin-top: 0;
+}
+
+.cart-empty {
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.cart-items-list {
+  flex: 2; /* Ocupa 2/3 do espaço */
+}
+.cart-summary {
+  flex: 1; /* Ocupa 1/3 do espaço */
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: fit-content; /* Para não esticar */
+}
+
+/* Estilos da lista */
+.cart-item-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  font-weight: bold;
+  color: #0c4a36;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px dashed #ddd;
+  padding: 0.75rem 0;
+}
+
+.cart-item-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-item-details img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.item-name {
+  font-weight: bold;
+  margin: 0;
+  color: #0c4a36;
+}
+.remove-btn {
+  background: none;
+  border: none;
+  color: #cc0000;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0c4a36;
+}
+
+.cart-item-quantity span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0c4a36;
+}
+
+.cart-item-quantity button {
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: #0c4a36;
+}
+.cart-item-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0c4a36;
+}
+
+/* Estilos do Resumo */
+.cupom-input {
+  display: flex;
+  margin: 0.5rem 0 1rem 0;
+  gap: 0.5rem;
+}
+
+.cupom-input input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.cupom-input button {
+  background-color: #0c4a36;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.total-row {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-top: 2px solid #ccc;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+/* Ajuste no botão FECHAR PEDIDO (Link) para que continue em 100% de largura dentro do summary */
+.checkout-btn {
+  display: block; 
+  text-align: center;
+  
+  background-color: #e9a131; /* Laranja */
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%; /* Mantém a largura de 100% dentro do .cart-summary */
+  margin-top: 1.5rem; 
+  box-sizing: border-box; 
+  transition: opacity 0.3s ease;
+}
+
+.checkout-btn:hover {
+  opacity: 0.9;
+}
