@@ -4,11 +4,9 @@ import { lazy, Suspense } from "react";
 import { Home } from './pages/home/Home'
 import { Navbar } from './components/Navbar/Navbar'
 import { Login } from './pages/Login/Login'
+import { PortalColaborador } from './components/PortalColaborador/PortalColaborador'
 
-// IMPORTAÇÃO CORRETA (default)
-import { PortalColaborador } from "./components/PortalColaborador/PortalColaborador";
-
-// Lazy loading
+// Lazy loading (carrega só quando o usuário entra na página)
 const PontoEletronico = lazy(() =>
   import("./components/PontoEletronico/PontoEletronico")
 );
@@ -35,21 +33,23 @@ export const AppRoutes = () => {
 
             <Suspense fallback={<p>Carregando...</p>}>
                 <Routes>
-
                     <Route path='/home' element={<Home />} />
                     <Route path='/login' element={<Login />} />
 
-                    {/* Fluxo Ingressos */}
+                    {/* Fluxo Principal */}
                     <Route path='/ingressos' element={<IngressosLanding />} />
+
+                    {/* Validação */}
                     <Route path='/ingressos/validar' element={<ValidarIngresso />} />
                     <Route path='/pedido/:id' element={<ValidacaoIngressos />} />
+
+                    {/* Compra */}
                     <Route path='/ingressos/comprar/data' element={<CompraData />} />
                     <Route path='/ingressos/comprar/catalogo' element={<CompraCatalogo />} />
                     <Route path='/carrinho' element={<Carrinho />} />
                     <Route path='/pagamento' element={<Pagamento />} />
                     <Route path='/pagamento/sucesso' element={<PagamentoSucesso />} />
 
-                    {/* Portal Colaborador */}
                     <Route path='/portal-colaborador' element={<PortalColaborador />} />
 
                     {/* Ponto Eletrônico — Lazy */}
@@ -60,7 +60,6 @@ export const AppRoutes = () => {
 
                     {/* Rota padrão */}
                     <Route path='*' element={<Navigate to="/home" />} />
-
                 </Routes>
             </Suspense>
         </BrowserRouter>

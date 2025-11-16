@@ -1,0 +1,190 @@
+/*
+ * Estilos customizados para o Ponto Eletrônico
+ * Complementam as classes do Tailwind CSS
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f9;
+}
+
+.ponto-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-id-display {
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+/* Status Display */
+.ponto-status {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #e0f2fe; /* light blue */
+    color: #0c4a6e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.status-entrada {
+    color: #15803d; /* Green 700 */
+    font-weight: 700;
+}
+
+.status-saida {
+    color: #b91c1c; /* Red 700 */
+    font-weight: 700;
+}
+
+/* Camera Section */
+.camera-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 4 / 3;
+    background-color: #1f2937; /* Gray 800 for placeholder */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.live-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1); /* Espelha o vídeo para selfie */
+}
+
+.camera-error {
+    color: #ef4444;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    text-align: center;
+    height: 100%;
+}
+
+.register-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 14px 24px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+    transition: background 0.3s, transform 0.1s;
+}
+
+.register-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    transform: translateY(-2px);
+}
+
+.register-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* History Section */
+.history-section {
+    padding-top: 10px;
+}
+
+.daily-record {
+    border: 1px solid #e2e8f0;
+}
+
+/* Modal Styling (ConfirmationModal) */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.modal-ok-btn {
+    background-color: #4f46e5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.modal-ok-btn:hover {
+    background-color: #4338ca;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+    .ponto-container {
+        margin: 0;
+        padding: 15px;
+        border-radius: 0;
+    }
+}

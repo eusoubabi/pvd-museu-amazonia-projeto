@@ -91,12 +91,12 @@ export const ValidacaoIngressos = () => {
             <p className="ticket-museum-name">MUSEU DE ARTES MANAUS</p>
             <hr className="ticket-divider"/>
             
-            <img
-  src={`${import.meta.env.BASE_URL}icon.png`}
-  alt="Logo Museu"
-  className="ticket-logo"
-/>
-
+            <img 
+                // *** CORREÇÃO FINAL AQUI: MUDANÇA PARA .png ***
+                src="/icon.png" 
+                alt="Logo Museu" 
+                className="ticket-logo"
+            />
             
             <div className="ticket-info">
                 <p className="ticket-type"><strong>Ingresso:</strong> {ticket.name}</p> 

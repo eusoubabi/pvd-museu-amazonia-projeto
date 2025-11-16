@@ -16,12 +16,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-left">
-                <img
-  src={`${import.meta.env.BASE_URL}icon.png`}
-  alt="Logo Museum"
-  className="navbar-logo"
-/>
- 
+                <img src="/icon.png" alt="Logo Museum" className="navbar-logo" /> 
                 <Link to="/home">HOME</Link>
                 <Link to="#">AGENDA</Link>
                 <Link to="#">SOBRE</Link>

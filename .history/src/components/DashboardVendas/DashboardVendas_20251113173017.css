@@ -1,0 +1,152 @@
+/* CONTAINER GERAL */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.15);
+}
+
+/* TÍTULO PRINCIPAL */
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 35px;
+}
+
+/* CARDS DO TOPO */
+.dashboard-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 14px;
+  border-left: 6px solid #1e3a8a;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-card-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.dashboard-card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+
+/* GRÁFICOS */
+.dashboard-chart-container {
+  margin-top: 40px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-chart-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #1e3a8a;
+}
+
+
+/* TABELA */
+.dashboard-table-wrapper {
+  margin-top: 45px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th {
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 0.95rem;
+}
+
+.dashboard-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.dashboard-table tr:hover td {
+  background: #f1f5f9;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .dashboard-container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .dashboard-title {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-card-value {
+    font-size: 1.4rem;
+  }
+}
+
+/* KPIs NOVOS */
+.kpi-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-radius: 14px;
+  color: #fff;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.1);
+}
+
+.kpi-title {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.kpi-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.kpi-icon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+}
+
+/* CORES */
+.kpi-green { background: #16a34a; }
+.kpi-blue { background: #1d4ed8; }
+.kpi-orange { background: #f97316; }
+.kpi-purple { background: #7c3aed; }

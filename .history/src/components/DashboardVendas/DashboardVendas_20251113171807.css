@@ -1,0 +1,45 @@
+.dashboard-wrapper {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.kpi-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card-kpi {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart-box {
+  background: #111827;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.sales-form {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.sales-history-box {
+  background: #111827;
+  padding: 20px;
+  border-radius: 14px;
+}

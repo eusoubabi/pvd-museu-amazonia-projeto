@@ -1,0 +1,224 @@
+/* CONTAINER GERAL */
+.ponto-container {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0, 39, 8, 0.562);
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* TÍTULOS */
+.ponto-container h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.user-id-display {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+
+/* STATUS */
+.ponto-status {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.status-entrada {
+  color: #10b981;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.status-saida {
+  color: #ef4444;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+
+/* CAMERA */
+.camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 520px;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid #1e3a8a;
+}
+
+.live-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* BOTÃO DE REGISTRO */
+.register-btn {
+  margin-top: 15px;
+  background: #1e40af;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.register-btn:hover {
+  background: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+
+
+/* HISTÓRICO */
+.history-section h3 {
+    color: #ff7b00; /* Laranja bonito */
+    font-weight: bold;
+}
+
+/* Cada item da lista */
+.history-item {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #4f46e5; /* Roxo */
+}
+
+/* Texto interno */
+.history-item p {
+    color: #333 !important;      /* ← COR DO TEXTO */
+    margin: 2px 0;
+}
+
+/* Foto */
+.history-photo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+}
+
+.daily-record {
+  margin-bottom: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 15px;
+  border-left: 5px solid #1e3a8a;
+}
+
+.daily-record h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.daily-record div {
+  border-radius: 6px;
+}
+
+
+/* MODAL */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px 28px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-ok-btn {
+  margin-top: 18px;
+  background: #1e3a8a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.modal-ok-btn:hover {
+  background: #162f6e;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .ponto-container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .register-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .video-wrapper {
+    max-width: 100%;
+  }
+
+  .modal-content {
+    padding: 25px 20px;
+  }
+}
